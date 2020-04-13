@@ -3,6 +3,10 @@ module V1
         before_action :set_user, only: [:show, :update, :destroy]
         #skip_before_action :verify_authenticity_token
 
+        def top
+            render json: { 'welcome!': 'APIサーバー元気に稼働中' }
+        end      
+
         def index
           users = User.order(created_at: :desc)
           render json: { status: 'SUCCESS', message: 'Loaded users', data: users }
