@@ -4,7 +4,7 @@ module V1
         #skip_before_action :verify_authenticity_token
 
         def index
-            render json: { 'welcome!': 'APIサーバー元気に稼働中' }
+            render json: { 'welcome!': 'やったね！おめでとう！！！' }
         end      
 
 #        def index
